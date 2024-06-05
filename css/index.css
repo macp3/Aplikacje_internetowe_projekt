@@ -1,0 +1,42 @@
+@media screen and (min-width: 720px) {
+    .carousel-item img {
+        height: 500px;
+    }
+    .card-img-top {
+        height: 200px;
+    }
+
+} 
+
+   @media screen and (max-width: 720px) {
+    .carousel-item img {
+        height: 180px;
+    }
+
+    .card-img-top {
+        height: 120px;
+    }
+}
+
+#title {
+    display: flex;
+    background-color: gray;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    padding-top: 15px;
+}
+
+#loc {
+    margin-top: 15px;
+    width: 100%;
+}
+
+#contact {
+    margin-top: 20px;
+}
+
+.navbar-brand {
+    border-radius: 25px;
+}
