@@ -18,7 +18,7 @@
         <link href="css/index.css" rel="stylesheet" />
         <script src="js/scripts.js"></script>
     </head>
-    <body>
+    <body onload="start()">
         <!-- Pasek nawigacyjny-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
@@ -50,7 +50,7 @@
             <!-- Section-->
             <main>
                 <div id="container">
-                <form autocomplete="off" action="zaloguj.php" method="post">
+                <form autocomplete="off" action="javascript:login()" method="post">
                     <div class="form__icon" aria-hidden="true"></div>
                     <div class="form__input-container">
                         <input id="email" type="email" placeholder=" " aria-label="email" name="email"/>
@@ -63,6 +63,7 @@
                     
                     <div class="form__spacer" aria-hidden="true"></div>
                     <input type="submit" value="Zaloguj się">
+                    <span id="login_error" class="red"></span>
                     <br/>
                     <div id="komunikat">
                     </div>

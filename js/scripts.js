@@ -100,9 +100,82 @@ function register() {
     user.postalNumber = document.getElementById("postalNumber").value;
     user.phone = document.getElementById("phone").value;
 
-    localStorage.setItem("user", JSON.stringify(user));
+    //Funkcja pobiera listę zarejestrowanych użytkowników z LocalStrage
+    //następnie jeśli nie ma takiego użytkownika w bazie to dodaje go do listy w localstorage
+
+    //oczywiście ten sposób przetrzymywania danych logowania jest zły pod wieloma względami
+    //ale na potrzeby tego projektu jest on wystarczający
+
+    users = JSON.parse(localStorage.getItem("users"));
+
+    freeEmail = true;
+
+    users.forEach(registeredUser => {
+        if(registeredUser.email === user.email) {
+            freeEmail = false;
+        }
+    });
+
+    if(freeEmail)
+    {
+        users.push(user);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        document.getElementById("container").innerHTML = "<h1>Dziękujemy za rejestrację w serwisie www.dreamly.pl</h1>"
+    }
+    else document.getElementById("email_error").innerHTML="Ten email jest już zarejestrowany w bazie";
+
 }
 
 function login() {
-    let logged = JSON.parse(localStorage.getItem("user"));
+    //Funkcja obsługująca logowanie użytkownika
+
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let users = JSON.parse(localStorage.getItem("users"));
+
+    if (users !== null) {
+        for (let index = 0; index < users.length; index++) {
+            if (users[index].email === email && users[index].password === password) {
+                localStorage.setItem("loggedUser", JSON.stringify(users[index]));
+                window.location.href = "index.html";
+                return
+            }
+        }
+    }
+
+    console.log(email);
+    console.log(password);
+
+    document.getElementById("login_error").innerHTML = "Błędny login lub hasło"
+
+}
+
+function startIndex() {
+    //Funkcja dla index.html sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
+
+    users = localStorage.getItem("users");
+
+    if (users === null) {
+        localStorage.setItem("users", "[]");
+    }
+
+    logged = JSON.parse(localStorage.getItem("loggedUser"));
+
+    if (logged !== null) {
+        let loginSpace = document.getElementById("loginSpace");
+        loginSpace.innerHTML = "<span class=\"hello\" >Cześć "+ logged.name +"!</span>"+ "<a href=\"loginForm.html\"><button class=\"btn btn-outline-light\">Moje konto</button></a>"
+    }
+
+}
+
+function start() {
+    //Funkcja dla innych dokumentów niż index sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
+    users = localStorage.getItem("users");
+
+    if (users === null) {
+        localStorage.setItem("users", "[]");
+    }
 }
