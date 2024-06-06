@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Biuro podróży" />
+        <meta name="author" content="Maciej Pietras" />
+        <title>Dreamly</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+
+        <link href="css/login.css" rel="stylesheet" />
+        <!-- CSS w celu responsywności baneru-->
+        <link href="css/index.css" rel="stylesheet" />
+        <link href="css/account.css" rel="stylesheet" />
+        <script src="js/scripts.js"></script>
+    </head>
+    <body onload="start()">
+        <!-- Pasek nawigacyjny-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html"><img src="assets/logo.JPG" style="width: 180px; height: auto; border-radius: 25px;" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Strona Główna</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">Destynacje</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popularne</a></li>
+                                <li><a class="dropdown-item" href="#!">Last Minute</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="loginSpace">
+                        <a href="loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
+                        <a href="registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Dodanie plaży na tło -->
+        <div id="tlo">
+            <main>
+                <div id="container">
+                    <h1>O Nas - Biuro Podróży Dreamly</h1>
+                    <img src="assets/team.jpg" alt="Nasze zdjęcie" style="border-radius: 18px; margin-top: 10px; margin-bottom: 15px;">
+                    <h3>Kim Jesteśmy?</h3>
+                    <span>Biuro Podróży Dreamly to zespół pasjonatów podróży, który od lat pomaga swoim klientom odkrywać najpiękniejsze zakątki świata. Z zaangażowaniem i profesjonalizmem organizujemy niezapomniane wycieczki, które dostosowujemy do indywidualnych potrzeb i marzeń naszych podróżników. Nasza misja to tworzenie wyjątkowych wspomnień i doświadczeń, które na długo pozostaną w sercach naszych klientów.</span>
+                    <h3>Nasza Historia</h3>
+                    <span>Nasza przygoda z organizowaniem podróży rozpoczęła się wiele lat temu, kiedy to kilku przyjaciół postanowiło podzielić się swoją pasją do odkrywania świata z innymi. Od tego czasu Biuro Podróży Dreamly stało się jednym z wiodących biur podróży, zdobywając zaufanie tysięcy klientów. Nasza historia to ciągły rozwój, nieustanne poszerzanie oferty i dbałość o najwyższe standardy obsługi.</span>
+
+                    <h3>Nasza Misja</h3>
+                    <span>Naszą misją jest spełnianie podróżniczych marzeń naszych klientów. Wierzymy, że każda podróż to wyjątkowa okazja do poznania nowych kultur, ludzi i miejsc. Dlatego staramy się, aby każda organizowana przez nas wycieczka była perfekcyjnie zaplanowana i dopasowana do oczekiwań podróżników. Dbamy o każdy detal, od wyboru najlepszych miejsc noclegowych, przez atrakcyjne programy wycieczek, aż po zapewnienie pełnego bezpieczeństwa i komfortu.</span>
+
+                    <h3>Dlaczego My?</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <span>Doświadczenie i Profesjonalizm: Nasz zespół składa się z doświadczonych ekspertów, którzy posiadają bogatą wiedzę na temat różnych destynacji. Dzięki temu możemy oferować naszym klientom tylko sprawdzone i rekomendowane atrakcje oraz miejsca.</span>
+                        <span>Indywidualne Podejście: Każdy klient jest dla nas wyjątkowy, dlatego staramy się dopasować ofertę do indywidualnych potrzeb i oczekiwań. Z nami możesz być pewien, że Twoje wakacje będą dokładnie takie, jak sobie wymarzyłeś.</span>
+                        <span>Bogata Oferta: Oferujemy szeroką gamę wycieczek, od egzotycznych wakacji na plaży, przez aktywne wyjazdy pełne przygód, po luksusowe podróże do najpiękniejszych miejsc na świecie. Niezależnie od tego, czego szukasz, znajdziesz to w naszej ofercie.</span>
+                        <span>Bezpieczeństwo i Komfort: Zdajemy sobie sprawę, jak ważne jest bezpieczeństwo w podróży. Dlatego współpracujemy tylko z zaufanymi partnerami, dbamy o odpowiednie ubezpieczenia i zapewniamy wsparcie na każdym etapie wyjazdu.</span>
+                        <span>Korzystne Ceny: Staramy się oferować konkurencyjne ceny, nie rezygnując przy tym z wysokiej jakości usług. Dzięki naszym kontaktom i doświadczeniu możemy proponować atrakcyjne pakiety i promocje.</span>
+                    </div>
+
+                    <h3>Co Oferujemy?</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <span>Wakacje Marzeń: Niezależnie od tego, czy marzysz o leniwych wakacjach na plaży, aktywnym wypoczynku w górach, czy egzotycznej podróży po najpiękniejszych zakątkach świata, mamy coś dla Ciebie.</span>
+                        <span>Wycieczki Zorganizowane: Starannie zaplanowane trasy, które pozwolą Ci odkryć najpiękniejsze i najbardziej interesujące miejsca na świecie. Nasze wycieczki to połączenie zwiedzania, relaksu i przygody.</span>
+                        <span>Wyjazdy Tematyczne: Dla miłośników historii, przyrody, kulinariów czy sportu przygotowaliśmy specjalne wyjazdy tematyczne, które pozwolą Ci zgłębić Twoje pasje i zainteresowania.</span>
+                        <span>Indywidualne Plany Podróży: Dla tych, którzy wolą podróżować na własną rękę, oferujemy pomoc w przygotowaniu indywidualnych planów podróży, dopasowanych do Twoich potrzeb i oczekiwań.</span>
+                    </div>
+
+                    <h3>Nasz Zespół</h3>
+                    <span>Zespół Biura Podróży Dreamly to grupa profesjonalistów, dla których podróże są prawdziwą pasją. Każdy z nas posiada bogate doświadczenie i wiedzę, którą chętnie dzielimy się z naszymi klientami. Jesteśmy tu po to, aby doradzać, wspierać i inspirować do odkrywania świata.</span>
+
+                    <h3>Kontakt</h3>
+                    <span>Zapraszamy do kontaktu z nami! Nasi konsultanci są do Twojej dyspozycji i z przyjemnością odpowiedzą na wszystkie pytania oraz pomogą w wyborze idealnej wycieczki. Odwiedź nasze biuro, zadzwoń lub napisz e-mail - jesteśmy tu, aby spełniać Twoje podróżnicze marzenia.</span>
+
+                    <h3 style="margin-top: 20px;">Dołącz do grona naszych zadowolonych klientów i odkryj świat z Biurem Podróży Dreamly! Twoje niezapomniane przygody zaczynają się właśnie tutaj.</h3>
+                </div>
+            </main>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Maciej Pietras 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

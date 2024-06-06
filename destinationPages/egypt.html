@@ -16,6 +16,7 @@
         <link href="../css/destinationPage.css" rel="stylesheet" />
 
         <link href="../css/login.css" rel="stylesheet" />
+        
         <!-- CSS w celu responsywności baneru-->
         <script src="../js/scripts.js"></script>
 
@@ -23,7 +24,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body onload="startAccount()">
+    <body onload="startDest()">
         <!-- Pasek nawigacyjny-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
@@ -32,7 +33,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Strona Główna</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">O nas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about.html">O nas</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -43,7 +44,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div>
+                    <div id="loginSpace">
                         <a href="../loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
                         <a href="../registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
                     </div>
@@ -66,7 +67,7 @@
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center" style="display: flex; align-items: center; justify-content: center;">
                                 <h5 style="float: left;">---></h5>
-                                <button class="btn btn-primary\" onclick="logout()">Zamów już teraz!</button>
+                                <button class="btn btn-primary\" onclick="addDestinationToUser(0)">Zamów już teraz!</button>
                                 <h5 style="float: right;"><---</h5>
                             </div>
                         </div>
@@ -112,13 +113,13 @@
                             <div id="carouselExample" class="carousel slide">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <img src="../assets/egipt1.webp" class="d-block w-100" alt="..." style="height: 550px;">
+                                    <img src="../assets/egipt1.webp" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="../assets/egipt2.jpg" class="d-block w-100" alt="..." style="height: 550px;">
+                                    <img src="../assets/egipt2.jpg" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="../assets/egipt3.jpg" class="d-block w-100" alt="..." style="height: 550px;">
+                                    <img src="../assets/egipt3.jpg" class="d-block w-100" alt="...">
                                   </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

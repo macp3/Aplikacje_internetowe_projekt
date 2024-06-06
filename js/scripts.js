@@ -1,3 +1,71 @@
+//Lista dostępnych destynacji ze skróconymi opisami
+const destinations = [
+    {"name": "Egipt", 
+        "Description": "Odkryj magiczny Egipt z Biurem Podróży Dreamly! Zwiedź monumentalne piramidy w Gizie, \
+        zachwyć się skarbami Muzeum Egipskiego w Kairze i podążaj śladami faraonów w Dolinie Królów w Luksorze. Odpocznij \
+        nad Morzem Czerwonym w luksusowych kurortach Hurghady lub Sharm El-Sheikh, ciesząc się krystalicznie czystą wodą i \
+        bogactwem podwodnego świata. Nasze starannie zaplanowane wycieczki zapewnią Ci komfort, bezpieczeństwo i \
+        niezapomniane wrażenia. Zarezerwuj swoje wakacje marzeń i odkryj fascynującą historię oraz kulturę starożytnego Egiptu!",
+        "minature" : "egipt_miniatura.jpg"
+    },
+    {"name": "Maroko", 
+        "Description": "Odkryj egzotyczne Maroko z Biurem Podróży Dreamly! Zanurz się w tętniącym życiem Marrakeszu, \
+        zwiedzaj historyczne medyny Fezu i Casablanki, i przemierzaj majestatyczne wydmy Sahary na wielbłądzie. \
+        Odpocznij w malowniczych górach Atlas, odkrywając tradycyjne wioski berberyjskie. Nasze starannie \
+        zaplanowane wycieczki zapewnią Ci komfort, bezpieczeństwo i niezapomniane wrażenia. Zarezerwuj \
+        swoje wakacje marzeń i poznaj bogatą kulturę oraz niezwykłe krajobrazy Maroka!",
+        "minature" : "maroko_minature.jpg"
+    },
+    {"name": "Turcja", 
+        "Description": "Odkryj fascynującą Turcję z Biurem Podróży Dreamly! Zwiedzaj historyczne Stambuł, gdzie Europa\
+        spotyka się z Azją, podziwiaj zapierające dech w piersiach krajobrazy Kapadocji i relaksuj się na pięknych \
+        plażach Riwiery Tureckiej. Odkryj starożytne ruiny Efezu i zanurz się w termalnych basenach Pamukkale. Nasze\
+        starannie zaplanowane wycieczki zapewnią Ci komfort, bezpieczeństwo i niezapomniane wrażenia. Zarezerwuj \
+        swoje wakacje marzeń i odkryj bogatą kulturę oraz niezwykłe atrakcje Turcji!",
+        "minature" : "Turcja.jpg"
+    },
+    {"name": "Sri Lanka", 
+        "Description": "Odkryj rajską Sri Lankę z Biurem Podróży Dreamly! Zwiedzaj starożytne miasta Anuradhapura i \
+        Polonnaruwa, podziwiaj majestatyczną Sigiriyę i relaksuj się na złocistych plażach Bentoty. Odkryj bujne\
+        plantacje herbaty w Nuwara Eliya i spotkaj dzikie słonie w Parku Narodowym Yala. Nasze starannie zaplanowane\
+        wycieczki zapewnią Ci komfort, bezpieczeństwo i niezapomniane wrażenia. Zarezerwuj swoje wakacje marzeń\
+        i poznaj bogatą kulturę oraz przyrodę Sri Lanki!",
+        "minature" : "sri_lanka.jpg"
+    },
+    {"name": "Kenia", 
+        "Description": "Odkryj dziką Kenię z Biurem Podróży Dreamly! Doświadcz niezapomnianego safari w Parku Narodowym Masai \
+        Mara, podziwiaj Wielką Migrację i spotkaj \"Wielką Piątkę\". Zwiedzaj malownicze jezioro Nakuru, znane z flamingów,\
+         oraz wulkaniczne krajobrazy Parku Narodowego Amboseli z majestatycznym Kilimandżaro w tle. Odpocznij na rajskich \
+         plażach Mombasy nad Oceanem Indyjskim. Nasze starannie zaplanowane wycieczki zapewnią Ci komfort, bezpieczeństwo \
+         i niezapomniane wrażenia. Zarezerwuj swoje wakacje marzeń i odkryj fascynującą przyrodę oraz kulturę Kenii!",
+        "minature" : "kenia.jpg"
+    },
+    {"name": "Tajlandia", 
+        "Description": "Odkryj egzotyczną Tajlandię z Biurem Podróży Dreamly! Zwiedzaj tętniący życiem Bangkok, podziwiaj \
+        wspaniałe świątynie w Ayutthaya i odpocznij na bajecznych plażach Phuket oraz Krabi. Odkryj bujne dżungle i spotkaj \
+        dziką przyrodę w Parku Narodowym Khao Sok, a także delektuj się autentyczną tajską kuchnią. Nasze starannie \
+        zaplanowane wycieczki zapewnią Ci komfort, bezpieczeństwo i niezapomniane wrażenia. Zarezerwuj swoje wakacje \
+        marzeń i poznaj kulturę oraz piękno Tajlandii!",
+        "minature" : "tajlandia.jpg"
+    },
+    {"name": "Oman", 
+        "Description": "Odkryj magiczny Oman z Biurem Podróży Dreamly! Zwiedzaj tętniący życiem Maskat, podziwiaj \
+        majestatyczne góry Al-Hadżar i odkrywaj tajemnice pustyni Wahiba Sands. Odwiedź historyczne fortece w \
+        Nizwie i relaksuj się na dziewiczych plażach Salali. Nasze starannie zaplanowane wycieczki zapewnią Ci \
+        komfort, bezpieczeństwo i niezapomniane wrażenia. Zarezerwuj swoje wakacje marzeń i odkryj bogatą kulturę oraz niezwykłe krajobrazy Omanu!",
+        "minature" : "oman.jpg"
+    },
+    {"name": "Dominikana", 
+        "Description": "Odkryj rajską Dominikanę z Biurem Podróży Dreamly! Relaksuj się na białych, piaszczystych \
+        plażach Punta Cana i Bayahibe, zanurz się w turkusowych wodach i podziwiaj kolorowe rafy koralowe. \
+        Zwiedzaj kolonialne zabytki Santo Domingo, najstarszego miasta w Nowym Świecie. Odkryj bujne lasy \
+        tropikalne i malownicze wodospady w regionie Samana. Nasze starannie zaplanowane wycieczki zapewnią\
+        Ci komfort, bezpieczeństwo i niezapomniane wrażenia. Zarezerwuj swoje wakacje marzeń i poznaj piękno oraz kulturę Dominikany!",
+        "minature" : "dominikana.jpg"
+    },
+
+]
+
 function sprawdzPole(pole_id,obiektRegex) {
 
     //Funkcja sprawdza czy wartość wprowadzona do pola tekstowego
@@ -78,7 +146,8 @@ function registerValidate() {
     }
     else document.getElementById("password_error").innerHTML="";
 
-    if (!sprawdzBox("terms"))
+    //Sprawdza również formularz edycji danych konta, stąd pierwszy warunek
+    if (document.getElementById("terms") !== null && !sprawdzBox("terms"))
     { 
         ok=false;
         document.getElementById("termsOfService_error").innerHTML="Musisz zaakceptować regulamin!";
@@ -99,6 +168,7 @@ function register() {
     user.address = document.getElementById("address").value;
     user.postalNumber = document.getElementById("postalNumber").value;
     user.phone = document.getElementById("phone").value;
+    user.destinations = [];
 
     //Funkcja pobiera listę zarejestrowanych użytkowników z LocalStrage
     //następnie jeśli nie ma takiego użytkownika w bazie to dodaje go do listy w localstorage
@@ -130,6 +200,7 @@ function register() {
 
 function login() {
     //Funkcja obsługująca logowanie użytkownika
+    start();
 
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
@@ -155,18 +226,6 @@ function login() {
     }
 }
 
-function startAccount() {
-    //Funkcja dla innych dokumentów niż index sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
-    users = localStorage.getItem("users");
-
-    if (users === null) {
-        localStorage.setItem("users", "[]");
-        window.location.href = "index.html";
-    }
-
-    
-}
-
 function start() {
     //Funkcja dla innych dokumentów niż index sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
     users = localStorage.getItem("users");
@@ -185,7 +244,126 @@ function start() {
     }
 }
 
+function startAccount() {
+    //Funkcja startowa dla dokumentu myAccount, sprawdza czy użytkownik jest zalogowany i pokazuje mu jego zamówione wycieczki
+    start();
+
+    logged = JSON.parse(localStorage.getItem("loggedUser"));
+
+    if (logged === null) {
+        window.location.href = "loginForm.html";
+    }
+    else {
+        data = ""
+        if (logged.destinations.length > 0) {
+            logged.destinations.forEach(dest => {
+                data += "<div class=\"userDest\"><img src="+ "assets/" +destinations[dest].minature +" style=\"width: 180px; height: auto; border-radius: 25px;\" />" +
+                "<h4>"+ destinations[dest].name +"</h4>" +
+                "<span>" + destinations[dest].Description +"</span>" +
+                "<h5>Status: Nasz agent niedługo skontaktuje się z tobą</h5>" +
+                "<div id=\"settings\"><button class=\"btn btn-outline-dark\" onclick=\"deleteDestinationFromUser("+dest+")\" >Zrezygnuj :(</button></div>" +
+                "</div>"
+            });
+            document.getElementById("orderedDestinations").innerHTML = data
+        }
+        else {
+            document.getElementById("orderedDestinations").innerHTML = "Nie zamówiłeś jeszcze żadnej wycieczki :("
+        }
+    }
+
+    
+}
+
+function startDest() {
+    //Funkcja dokumentow w folderze destinationPage sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
+    users = localStorage.getItem("users");
+
+    if (users === null) {
+        localStorage.setItem("users", "[]");
+    }
+
+    logged = JSON.parse(localStorage.getItem("loggedUser"));
+
+    if (logged !== null) {
+        let loginSpace = document.getElementById("loginSpace");
+        loginSpace.innerHTML = "<span class=\"hello\" >Cześć "+ logged.name +"!</span>"+ 
+        "<a href=\"../myAccount.html\"><button class=\"btn btn-outline-light\" style=\"margin-right: 10px;\">Moje konto</button></a>" +
+        "<button class=\"btn btn-outline-light\" onclick=\"logout()\">Wyloguj się</button>" 
+    }
+}
+
 function logout() {
     localStorage.setItem("loggedUser", null);
     window.location.href = "index.html";
+}
+
+function addDestinationToUser(destinationIndex) 
+{
+    logged = JSON.parse(localStorage.getItem("loggedUser"));
+    isAdded = false;
+    logged.destinations.forEach(dest => {
+        if(dest === destinationIndex) {
+            document.getElementById("container").innerHTML = "<h2>Ta wycieczka jest już przypisana do twojego konta!</h2>";
+            isAdded = true
+        }
+    });
+
+    if(!isAdded)
+    {
+        logged.destinations.push(destinationIndex);
+        localStorage.setItem("loggedUser", JSON.stringify(logged));
+        document.getElementById("container").innerHTML = "<h2>Dziękujemy! Wycieczka została przypisana do twojego konta!</h2>";
+    }
+}
+
+function deleteDestinationFromUser(destinationIndex) 
+{
+    //Funcja usuwająca wycieczkę z konta użytkownila
+    
+    logged = JSON.parse(localStorage.getItem("loggedUser"));
+
+    logged.destinations.splice(logged.destinations.indexOf(destinationIndex),1);
+
+    localStorage.setItem("loggedUser", JSON.stringify(logged));
+
+    window.location.href = "myAccount.html";
+}
+
+function startEdit() {
+    start();
+
+    logged = JSON.parse(localStorage.getItem("loggedUser"));
+
+    document.getElementById("name").value = logged.name;
+    document.getElementById("secondName").value = logged.secondName
+    document.getElementById("email").value = logged.email
+    document.getElementById("address").value = logged.address
+    document.getElementById("postalNumber").value = logged.postalNumber
+    document.getElementById("phone").value = logged.phone
+    document.getElementById("password").value = logged.password
+}
+
+function editAccount() {
+
+    if (window.confirm("Czy na pewno chcesz edytować dane użytkownika?")) {
+        logged = JSON.parse(localStorage.getItem("loggedUser"));
+
+        logged.name = document.getElementById("name").value 
+        logged.secondName = document.getElementById("secondName").value 
+        logged.email = document.getElementById("email").value 
+        logged.address = document.getElementById("address").value 
+        logged.postalNumber = document.getElementById("postalNumber").value 
+        logged.phone = document.getElementById("phone").value 
+        logged.password = document.getElementById("password").value 
+
+        localStorage.setItem("loggedUser", JSON.stringify(logged));
+
+        window.alert("Dane zostały zmienione")
+        window.location.href = "myAccount.html";
+    } 
+
+}
+
+function back() {
+    window.location.href = "myAccount.html";
 }

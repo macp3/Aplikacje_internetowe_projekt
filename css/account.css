@@ -1,0 +1,23 @@
+#userInterface {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+}
+
+#orderedDestinations {
+    display: flex;
+    flex-direction: column;
+}
+
+.userDest {
+    padding: 80px;
+    border: 1px black solid;
+}
+
+h5{
+    margin-top: 20px;
+}

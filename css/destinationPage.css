@@ -6,21 +6,6 @@ main{
     align-items: center;
 }
 
-#container{
-    max-width: 1500px;
-    padding: 36px 24px;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-    backdrop-filter: blur(15px);
-    max-height: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
 #description{
     margin-top: 10px;
 }
@@ -34,18 +19,6 @@ main{
 
 h4{
     margin-top: 20px;
-}
-
-#carouselExample {
-    margin-top: 10px;
-    width: 60%;
-}
-
-#photos{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 @media screen and (min-width: 720px) {
@@ -62,6 +35,22 @@ h4{
         display: flex;
         padding: 20px;
     }
+
+    #carouselExample {
+        margin-top: 10px;
+        width: 60%;
+    }
+    
+    #photos{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        height: 550px;
+    }
 } 
 
 @media screen and (max-width: 720px) {
@@ -74,4 +63,5 @@ h4{
         width: 300px;
         height: auto;
     }
+
 }

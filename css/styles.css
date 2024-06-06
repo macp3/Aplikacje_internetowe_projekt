@@ -10,6 +10,83 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ /*
+  ustawienie stylu przywitania użytkownika
+ */
+
+ .hello{
+  color: white;
+  margin: 15px;
+}
+
+#container{
+  max-width: 1500px;
+  padding: 36px 24px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  backdrop-filter: blur(15px);
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Raleway", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+ /*
+  style dla półprzeźroczystego kontenera
+ */
+
+@media screen and (min-width: 720px) {
+  #container{
+      max-width: 1500px;
+  }
+} 
+
+@media screen and (max-width: 720px) {
+  #container{
+      max-width: 90vw;
+  }
+}
+
+ /*
+  style dla tła
+ */
+
+#tlo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 720px) {
+  #tlo {
+      min-height: 800px;
+  }
+
+} 
+
+@media screen and (max-width: 720px) {
+  #tlo {
+    min-height: 480px;
+  }
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

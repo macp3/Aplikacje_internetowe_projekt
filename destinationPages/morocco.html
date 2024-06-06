@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Biuro podróży" />
+        <meta name="author" content="Maciej Pietras" />
+        <title>Dreamly</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../assets/icon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+
+        <link href="../css/destinationPage.css" rel="stylesheet" />
+
+        <link href="../css/login.css" rel="stylesheet" />
+        <!-- CSS w celu responsywności baneru-->
+        <script src="../js/scripts.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body onload="startDest()">
+        <!-- Pasek nawigacyjny-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/logo.JPG" style="width: 180px; height: auto; border-radius: 25px;" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Strona Główna</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../about.html">O nas</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">Destynacje</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popularne</a></li>
+                                <li><a class="dropdown-item" href="#!">Last Minute</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="loginSpace">
+                        <a href="../loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
+                        <a href="../registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Dodanie plaży na tło -->
+        <div id="tlo">
+            <main>
+                <div id="container">
+                    <iframe src="https://www.youtube.com/embed/nUHtdhGN0Dc?si=lM48edfEGXc5uvGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div id="description">
+                        <h1>Wakacje w Maroku z Biurem Podróży XYZ</h1>
+                        <div class="review">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <span class="text-muted text-decoration-line-through">5770.00 PLN</span>
+                                        <h3>4670.00 PLN</h3>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center" style="display: flex; align-items: center; justify-content: center;">
+                                <h5 style="float: left;">---></h5>
+                                <button class="btn btn-primary\" onclick="addDestinationToUser(1)">Zamów już teraz!</button>
+                                <h5 style="float: right;"><---</h5>
+                            </div>
+                        </div>
+                        <div class="twoCol">
+                            <div class="left">
+                                <div>
+                                    <h4>Wstęp</h4>
+                                    <span>Marzysz o egzotycznej podróży, która połączy w sobie bogactwo kultury, malownicze krajobrazy i niesamowite przygody? Biuro Podróży XYZ zaprasza Cię na niezapomniane wakacje w Maroku! Odkryj z nami magiczny kraj, który zachwyca różnorodnością, gościnnością i fascynującą historią.</span>
+                                </div>
+                                <div>
+                                    <h4>Marrakesz - Perła Południa</h4>
+                                    <span>Rozpocznij swoją marokańską przygodę w sercu kraju, w tętniącym życiem Marrakeszu. Spaceruj po słynnym placu Dżemaa el-Fna, który wieczorem zamienia się w ogromny targ pełen straganów z jedzeniem, artystów ulicznych i muzyków. Zwiedź wspaniałe pałace i ogrody, takie jak Pałac Bahia czy Ogrody Majorelle, oraz odkryj ukryte zakątki medyny, gdzie czekają na Ciebie malownicze souki pełne ręcznie wykonanych wyrobów.</span>
+                                </div>
+                                <div>
+                                    <h4>Fez - Duchowe Centrum Maroka</h4>
+                                    <span>Następnie udaj się do Fezu, duchowego i kulturalnego centrum Maroka. Zwiedź średniowieczną medynę, wpisaną na listę UNESCO, gdzie możesz zgubić się w labiryncie wąskich uliczek pełnych historycznych budynków, tradycyjnych warsztatów i lokalnych bazarów. Odwiedź słynną medresę Bou Inania i tanneries, gdzie wciąż odbywa się tradycyjna produkcja skóry.</span>
+                                </div>
+                                <div>
+                                    <h4>Casablanca - Nowoczesność i Tradycja</h4>
+                                    <span>Casablanca to miasto, które łączy nowoczesność z tradycją. Zwiedź imponujący meczet Hassana II, który jest jednym z największych na świecie i zachwyca swoją architekturą oraz położeniem nad brzegiem Oceanu Atlantyckiego. Spaceruj po eleganckiej dzielnicy Corniche, pełnej luksusowych hoteli, restauracji i sklepów, oraz odwiedź tętniący życiem rynek centralny.</span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <h4>Sahara - Pustynne Przygody</h4>
+                                    <span>Nie ma lepszego miejsca na odkrycie prawdziwego piękna pustyni niż Sahara. Z Biurem Podróży XYZ wyruszysz na niezapomnianą wyprawę na wielbłądach, przemierzając piaszczyste wydmy Erg Chebbi. Noc spędzona w tradycyjnym berberyjskim obozie pod gwiazdami to doświadczenie, które zostanie w Twojej pamięci na długo. Podziwiaj wschód i zachód słońca nad pustynią, a także ciesz się lokalnymi potrawami i muzyką przy ognisku.</span>
+                                </div>
+                                <div>
+                                    <h4>Atlas - Góry i Wioski Berberyjskie</h4>
+                                    <span>Odkryj majestatyczne góry Atlas, które oferują zapierające dech w piersiach widoki i możliwość aktywnego wypoczynku. Wyrusz na trekking po malowniczych szlakach, odwiedzając tradycyjne wioski berberyjskie, gdzie możesz poznać autentyczną kulturę i gościnność mieszkańców. W zimie możesz nawet spróbować swoich sił na nartach w ośrodku narciarskim Oukaïmeden.</span>
+                                </div>
+                                <div>
+                                    <h4>Marokańska Kuchnia i Kultura</h4>
+                                    <span>Podczas podróży z Biurem Podróży XYZ będziesz miał okazję skosztować wyśmienitych marokańskich potraw. Skosztuj tradycyjnych dań, takich jak tagine, couscous, harira czy pastilla. Weź udział w lokalnych warsztatach kulinarnych, gdzie nauczysz się przygotowywać marokańskie specjały. Odkryj bogactwo marokańskiej kultury, uczestnicząc w pokazach tańca brzucha i tradycyjnych festiwalach.</span>
+                                </div>
+                                <div>
+                                    <h4>Podsumowanie</h4>
+                                    <span>Nie czekaj dłużej i dołącz do nas na niezapomniane wakacje w Maroku! Biuro Podróży XYZ zapewni Ci wyjątkową podróż pełną niezapomnianych przygód, fascynujących zabytków i relaksu w malowniczych krajobrazach. Zarezerwuj swoje wymarzone wakacje już dziś i odkryj magiczny świat Maroka!</br></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="photos">
+                            <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="../assets/maroko1.jpeg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="../assets/maroko2.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="../assets/maroko3.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Maciej Pietras 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>

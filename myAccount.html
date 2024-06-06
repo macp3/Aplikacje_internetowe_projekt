@@ -15,7 +15,7 @@
 
         <link href="css/login.css" rel="stylesheet" />
         <!-- CSS w celu responsywności baneru-->
-        <link href="css/index.css" rel="stylesheet" />
+        <link href="css/account.css" rel="stylesheet" />
         <script src="js/scripts.js"></script>
     </head>
     <body onload="startAccount()">
@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Strona Główna</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">O nas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -38,7 +38,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div>
+                    <div id="loginSpace">
                         <a href="loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
                         <a href="registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
                     </div>
@@ -49,7 +49,12 @@
         <div id="tlo">
             <main>
                 <div id="container">
-                    
+                    <div id="userInterface">
+                        <div id="settings"><a href="settingsAccount.html"><button class="btn btn-outline-dark">Ustawienia konta</button></a></div>
+                        <div id="settings"><button class="btn btn-outline-dark">Usuń konto</button></div>
+                    </div>
+                    <h3>Zamówione wycieczki:</h3>
+                    <div id="orderedDestinations"></div>
                 </div>
             </main>
         </div>
