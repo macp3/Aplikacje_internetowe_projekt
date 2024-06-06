@@ -136,26 +136,39 @@ function login() {
 
     let users = JSON.parse(localStorage.getItem("users"));
 
+    if (JSON.parse(localStorage.getItem("loggedUser")) !== null) {
+        document.getElementById("login_error").innerHTML = "Jesteś już zalogowany!";
+        return;
+    }
+    else {
     if (users !== null) {
-        for (let index = 0; index < users.length; index++) {
-            if (users[index].email === email && users[index].password === password) {
-                localStorage.setItem("loggedUser", JSON.stringify(users[index]));
-                window.location.href = "index.html";
-                return
+            for (let index = 0; index < users.length; index++) {
+                if (users[index].email === email && users[index].password === password) {
+                    localStorage.setItem("loggedUser", JSON.stringify(users[index]));
+                    window.location.href = "index.html";
+                    return;
+                }
             }
         }
+
+        document.getElementById("login_error").innerHTML = "Błędny login lub hasło";
     }
-
-    console.log(email);
-    console.log(password);
-
-    document.getElementById("login_error").innerHTML = "Błędny login lub hasło"
-
 }
 
-function startIndex() {
-    //Funkcja dla index.html sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
+function startAccount() {
+    //Funkcja dla innych dokumentów niż index sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
+    users = localStorage.getItem("users");
 
+    if (users === null) {
+        localStorage.setItem("users", "[]");
+        window.location.href = "index.html";
+    }
+
+    
+}
+
+function start() {
+    //Funkcja dla innych dokumentów niż index sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
     users = localStorage.getItem("users");
 
     if (users === null) {
@@ -166,16 +179,13 @@ function startIndex() {
 
     if (logged !== null) {
         let loginSpace = document.getElementById("loginSpace");
-        loginSpace.innerHTML = "<span class=\"hello\" >Cześć "+ logged.name +"!</span>"+ "<a href=\"loginForm.html\"><button class=\"btn btn-outline-light\">Moje konto</button></a>"
+        loginSpace.innerHTML = "<span class=\"hello\" >Cześć "+ logged.name +"!</span>"+ 
+        "<a href=\"myAccount.html\"><button class=\"btn btn-outline-light\" style=\"margin-right: 10px;\">Moje konto</button></a>" +
+        "<button class=\"btn btn-outline-light\" onclick=\"logout()\">Wyloguj się</button>" 
     }
-
 }
 
-function start() {
-    //Funkcja dla innych dokumentów niż index sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
-    users = localStorage.getItem("users");
-
-    if (users === null) {
-        localStorage.setItem("users", "[]");
-    }
+function logout() {
+    localStorage.setItem("loggedUser", null);
+    window.location.href = "index.html";
 }

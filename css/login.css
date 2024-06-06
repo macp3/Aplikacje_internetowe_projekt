@@ -123,11 +123,11 @@ button:hover:after{
     display: flex;
 }
 
-#left{
+.left{
     margin-right: 10px;
 }
 
-#right {
+.right {
     margin-left: 10px;
 }
 
@@ -141,6 +141,13 @@ button:hover:after{
 
 #check {
     margin-bottom: 20px;
+}
+
+body {
+    font-family: "Raleway", sans-serif !important;
+    font-optical-sizing: auto !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
 }
 
 

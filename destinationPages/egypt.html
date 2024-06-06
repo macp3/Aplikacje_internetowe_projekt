@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Biuro podróży" />
+        <meta name="author" content="Maciej Pietras" />
+        <title>Dreamly</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../assets/icon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+
+        <link href="../css/destinationPage.css" rel="stylesheet" />
+
+        <link href="../css/login.css" rel="stylesheet" />
+        <!-- CSS w celu responsywności baneru-->
+        <script src="../js/scripts.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body onload="startAccount()">
+        <!-- Pasek nawigacyjny-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="../index.html"><img src="../assets/logo.JPG" style="width: 180px; height: auto; border-radius: 25px;" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Strona Główna</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">O nas</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">Destynacje</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popularne</a></li>
+                                <li><a class="dropdown-item" href="#!">Last Minute</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div>
+                        <a href="../loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
+                        <a href="../registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Dodanie plaży na tło -->
+        <div id="tlo">
+            <main>
+                <div id="container">
+                    <iframe src="https://www.youtube.com/embed/mfxQy5A_tHs?si=sSnjARunxmrnAbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div id="description">
+                        <h1>Wakacje w Egipcie z Biurem Podróży Dreamly</h1>
+                        <div class="review">
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                        </div>
+                        <h3>2580.00 PLN</h3>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center" style="display: flex; align-items: center; justify-content: center;">
+                                <h5 style="float: left;">---></h5>
+                                <button class="btn btn-primary\" onclick="logout()">Zamów już teraz!</button>
+                                <h5 style="float: right;"><---</h5>
+                            </div>
+                        </div>
+                        <div class="twoCol">
+                            <div class="left">
+                                <div>
+                                    <h4>Wstęp</h4>
+                                    <span>Marzysz o niezapomnianych wakacjach pełnych słońca, historii i niezwykłych przygód? Biuro Podróży Dreamly zaprasza Cię na niezapomniane wakacje w Egipcie! Odkryj z nami magiczny kraj, który od wieków fascynuje podróżników swoją bogatą historią, imponującymi zabytkami i wyjątkową kulturą.</span>
+                                </div>
+                                <div>
+                                    <h4>Luksor - Królestwo Faraonów</h4>
+                                    <span>Rozpocznij swoją przygodę w Luksorze, miejscu, gdzie przeszłość spotyka się z teraźniejszością. Zwiedź monumentalne świątynie Karnaku i Luksoru, spacerując po alei sfinksów i podziwiając ogromne posągi faraonów. Nie przegap Doliny Królów, gdzie odkryjesz grobowce najsłynniejszych władców Egiptu, w tym słynny grobowiec Tutanchamona.</span>
+                                </div>
+                                <div>
+                                    <h4>Kair - Serce Egiptu</h4>
+                                    <span>Następnie udaj się do tętniącego życiem Kairu, największego miasta Afryki. Zwiedź Muzeum Egipskie, gdzie czeka na Ciebie bogata kolekcja artefaktów, w tym skarby z grobowca Tutanchamona. Spaceruj po malowniczym starym mieście, odwiedzając zabytkowe meczety, bazary i wąskie uliczki pełne kolorowych straganów. Kulminacją wizyty w Kairze będzie oczywiście wizyta przy Wielkich Piramidach w Gizie oraz majestatycznym Sfinksie.</span>
+                                </div>
+                                <div>
+                                    <h4>Rejs po Nilu</h4>
+                                    <span>Nie ma lepszego sposobu na odkrywanie piękna Egiptu niż rejs po Nilu. Wypłyń w luksusowy rejs, podziwiając zmieniający się krajobraz: zielone pola, tradycyjne wioski i majestatyczne świątynie wznoszące się nad brzegiem rzeki. Podczas rejsu odwiedzisz m.in. świątynie w Edfu i Kom Ombo, a także Asuan, gdzie zobaczysz wspaniałą tamę i świątynię Philae.</span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div>
+                                    <h4>Morze Czerwone - Raj dla Miłośników Wody</h4>
+                                    <span>Po intensywnym zwiedzaniu czas na relaks nad Morzem Czerwonym. Biuro Podróży Dreamly oferuje luksusowe pobyty w popularnych kurortach, takich jak Hurghada, Sharm El-Sheikh czy Marsa Alam. Ciesz się białymi plażami, krystalicznie czystą wodą i niesamowitym podwodnym światem, który przyciąga nurków z całego świata. Nasze oferty obejmują szeroki wybór sportów wodnych, takich jak snorkeling, nurkowanie, windsurfing i wiele innych.</span>
+                                </div>
+                                <div>
+                                    <h4>Egipska Kuchnia i Kultura</h4>
+                                    <span>Podczas podróży z Biurem Podróży Dreamly będziesz miał okazję spróbować prawdziwych smaków Egiptu. Skosztuj lokalnych specjałów, takich jak koshari, falafel, shawarma czy baklava. Weź udział w tradycyjnych egipskich pokazach tanecznych, gdzie poznasz fascynujące tańce brzucha i dźwięki muzyki arabskiej.</span>
+                                </div>
+                                <div>
+                                    <h4>Komfort i Bezpieczeństwo</h4>
+                                    <span>Biuro Podróży Dreamly dba o to, aby Twoje wakacje były nie tylko niezapomniane, ale również komfortowe i bezpieczne. Nasze wycieczki są starannie zaplanowane i prowadzone przez doświadczonych przewodników, którzy zapewnią Ci wszechstronną opiekę i niezapomniane wrażenia. Oferujemy szeroki wybór zakwaterowania - od luksusowych hoteli po przytulne pensjonaty, aby spełnić oczekiwania każdego podróżnika.</span>
+                                </div>
+                                <div>
+                                    <h4>Podsumowanie</h4>
+                                    <span>Nie czekaj dłużej i dołącz do nas na niezapomniane wakacje w Egipcie! Biuro Podróży Dreamly zapewni Ci wyjątkową podróż pełną niezapomnianych przygód, fascynujących zabytków i relaksu nad Morzem Czerwonym. Zarezerwuj swoje wymarzone wakacje już dziś i odkryj magiczny świat starożytnego Egiptu!</br></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="photos">
+                            <div id="carouselExample" class="carousel slide">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="../assets/egipt1.webp" class="d-block w-100" alt="..." style="height: 550px;">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="../assets/egipt2.jpg" class="d-block w-100" alt="..." style="height: 550px;">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="../assets/egipt3.jpg" class="d-block w-100" alt="..." style="height: 550px;">
+                                  </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Maciej Pietras 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>
