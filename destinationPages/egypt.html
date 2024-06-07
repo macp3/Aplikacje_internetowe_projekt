@@ -15,9 +15,6 @@
 
         <link href="../css/destinationPage.css" rel="stylesheet" />
 
-        <link href="../css/login.css" rel="stylesheet" />
-        
-        <!-- CSS w celu responsywności baneru-->
         <script src="../js/scripts.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,10 +34,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Destynacje</a></li>
+                                <li><a class="dropdown-item" href="../allDestinations.html">Destynacje</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popularne</a></li>
-                                <li><a class="dropdown-item" href="#!">Last Minute</a></li>
+                                <li><a class="dropdown-item" href="../popular.html">Popularne</a></li>
+                                <li><a class="dropdown-item" href="../lastMinute.html">Last Minute</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -55,7 +52,7 @@
         <div id="tlo">
             <main>
                 <div id="container">
-                    <iframe src="https://www.youtube.com/embed/mfxQy5A_tHs?si=sSnjARunxmrnAbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video"><iframe src="https://www.youtube.com/embed/mfxQy5A_tHs?si=sSnjARunxmrnAbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                     <div id="description">
                         <h1>Wakacje w Egipcie z Biurem Podróży Dreamly</h1>
                         <div class="review">
@@ -66,9 +63,7 @@
                         <h3>2580.00 PLN</h3>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center" style="display: flex; align-items: center; justify-content: center;">
-                                <h5 style="float: left;">---></h5>
-                                <button class="btn btn-primary\" onclick="addDestinationToUser(0)">Zamów już teraz!</button>
-                                <h5 style="float: right;"><---</h5>
+                                <button class="btn btn-outline-dark" onclick="addDestinationToUser(0)">Zamów już teraz!</button>
                             </div>
                         </div>
                         <div class="twoCol">

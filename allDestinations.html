@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Biuro podróży" />
+        <meta name="author" content="Maciej Pietras" />
+        <title>Dreamly</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/lastMinute.css" rel="stylesheet" />
+        <script src="js/scripts.js"></script>
+    </head>
+    <body onload="start()">
+        <!-- Pasek nawigacyjny-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html"><img src="assets/logo.JPG" style="width: 180px; height: auto; border-radius: 25px;" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Strona Główna</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">O nas</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="allDestinations.html">Destynacje</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="popular.html">Popularne</a></li>
+                                <li><a class="dropdown-item" href="lastMinute.html">Last Minute</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div id="loginSpace">
+                        <a href="loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
+                        <a href="registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Dodanie plaży na tło -->
+        <div id="tlo">
+            <main>
+                <div id="container">
+                    <h1>Wszystkie Kierunki Oferowane Przez Nasze Biuro Podróży!</h1>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/maroko_minature.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Maroko</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">5770.00 PLN</span>
+                                4670.00 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/morocco.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/Turcja.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Turcja</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">6790.00 PLN</span>
+                                4602 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/turkey.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/kenia.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Kenia</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">14120.00 PLN</span>
+                                9672.50 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/kenya.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/oman.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Oman</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">7800.00 PLN</span>
+                                5690.00 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/oman.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/egipt_miniatura.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Egipt</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                2580.00 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/egypt.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/sri_lanka.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Sri Lanka</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                10622.55 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/sriLanka.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/tajlandia.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Tajlandia</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                10890.00 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/thailand.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                    <div class="dest"><div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="assets/dominikana.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Dominikana</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                9640.00 PLN
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="destinationPages/dominican.html">Sprawdź</a></div>
+                        </div>
+                    </div></div>
+                </div>
+            </main>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Maciej Pietras 2024</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

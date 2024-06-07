@@ -14,8 +14,6 @@
         <link href="../css/styles.css" rel="stylesheet" />
 
         <link href="../css/destinationPage.css" rel="stylesheet" />
-
-        <link href="../css/login.css" rel="stylesheet" />
         <!-- CSS w celu responsywności baneru-->
         <script src="../js/scripts.js"></script>
 
@@ -36,10 +34,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Destynacje</a></li>
+                                <li><a class="dropdown-item" href="../allDestinations.html">Destynacje</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popularne</a></li>
-                                <li><a class="dropdown-item" href="#!">Last Minute</a></li>
+                                <li><a class="dropdown-item" href="../popular.html">Popularne</a></li>
+                                <li><a class="dropdown-item" href="../lastMinute.html">Last Minute</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -54,9 +52,9 @@
         <div id="tlo">
             <main>
                 <div id="container">
-                    <iframe src="https://www.youtube.com/embed/nUHtdhGN0Dc?si=lM48edfEGXc5uvGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video"><iframe src="https://www.youtube.com/embed/nUHtdhGN0Dc?si=lM48edfEGXc5uvGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                     <div id="description">
-                        <h1>Wakacje w Maroku z Biurem Podróży XYZ</h1>
+                        <h1>Wakacje w Maroku z Biurem Podróży Dreamly</h1>
                         <div class="review">
                             <div class="bi-star-fill"></div>
                             <div class="bi-star-fill"></div>
@@ -68,16 +66,14 @@
                                         <h3>4670.00 PLN</h3>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center" style="display: flex; align-items: center; justify-content: center;">
-                                <h5 style="float: left;">---></h5>
-                                <button class="btn btn-primary\" onclick="addDestinationToUser(1)">Zamów już teraz!</button>
-                                <h5 style="float: right;"><---</h5>
+                                <button class="btn btn-outline-dark" onclick="addDestinationToUser(1)">Zamów już teraz!</button>
                             </div>
                         </div>
                         <div class="twoCol">
                             <div class="left">
                                 <div>
                                     <h4>Wstęp</h4>
-                                    <span>Marzysz o egzotycznej podróży, która połączy w sobie bogactwo kultury, malownicze krajobrazy i niesamowite przygody? Biuro Podróży XYZ zaprasza Cię na niezapomniane wakacje w Maroku! Odkryj z nami magiczny kraj, który zachwyca różnorodnością, gościnnością i fascynującą historią.</span>
+                                    <span>Marzysz o egzotycznej podróży, która połączy w sobie bogactwo kultury, malownicze krajobrazy i niesamowite przygody? Biuro Podróży Dreamly zaprasza Cię na niezapomniane wakacje w Maroku! Odkryj z nami magiczny kraj, który zachwyca różnorodnością, gościnnością i fascynującą historią.</span>
                                 </div>
                                 <div>
                                     <h4>Marrakesz - Perła Południa</h4>
@@ -95,7 +91,7 @@
                             <div class="right">
                                 <div>
                                     <h4>Sahara - Pustynne Przygody</h4>
-                                    <span>Nie ma lepszego miejsca na odkrycie prawdziwego piękna pustyni niż Sahara. Z Biurem Podróży XYZ wyruszysz na niezapomnianą wyprawę na wielbłądach, przemierzając piaszczyste wydmy Erg Chebbi. Noc spędzona w tradycyjnym berberyjskim obozie pod gwiazdami to doświadczenie, które zostanie w Twojej pamięci na długo. Podziwiaj wschód i zachód słońca nad pustynią, a także ciesz się lokalnymi potrawami i muzyką przy ognisku.</span>
+                                    <span>Nie ma lepszego miejsca na odkrycie prawdziwego piękna pustyni niż Sahara. Z Biurem Podróży Dreamly wyruszysz na niezapomnianą wyprawę na wielbłądach, przemierzając piaszczyste wydmy Erg Chebbi. Noc spędzona w tradycyjnym berberyjskim obozie pod gwiazdami to doświadczenie, które zostanie w Twojej pamięci na długo. Podziwiaj wschód i zachód słońca nad pustynią, a także ciesz się lokalnymi potrawami i muzyką przy ognisku.</span>
                                 </div>
                                 <div>
                                     <h4>Atlas - Góry i Wioski Berberyjskie</h4>
@@ -103,11 +99,11 @@
                                 </div>
                                 <div>
                                     <h4>Marokańska Kuchnia i Kultura</h4>
-                                    <span>Podczas podróży z Biurem Podróży XYZ będziesz miał okazję skosztować wyśmienitych marokańskich potraw. Skosztuj tradycyjnych dań, takich jak tagine, couscous, harira czy pastilla. Weź udział w lokalnych warsztatach kulinarnych, gdzie nauczysz się przygotowywać marokańskie specjały. Odkryj bogactwo marokańskiej kultury, uczestnicząc w pokazach tańca brzucha i tradycyjnych festiwalach.</span>
+                                    <span>Podczas podróży z Biurem Podróży Dreamly będziesz miał okazję skosztować wyśmienitych marokańskich potraw. Skosztuj tradycyjnych dań, takich jak tagine, couscous, harira czy pastilla. Weź udział w lokalnych warsztatach kulinarnych, gdzie nauczysz się przygotowywać marokańskie specjały. Odkryj bogactwo marokańskiej kultury, uczestnicząc w pokazach tańca brzucha i tradycyjnych festiwalach.</span>
                                 </div>
                                 <div>
                                     <h4>Podsumowanie</h4>
-                                    <span>Nie czekaj dłużej i dołącz do nas na niezapomniane wakacje w Maroku! Biuro Podróży XYZ zapewni Ci wyjątkową podróż pełną niezapomnianych przygód, fascynujących zabytków i relaksu w malowniczych krajobrazach. Zarezerwuj swoje wymarzone wakacje już dziś i odkryj magiczny świat Maroka!</br></span>
+                                    <span>Nie czekaj dłużej i dołącz do nas na niezapomniane wakacje w Maroku! Biuro Podróży Dreamly zapewni Ci wyjątkową podróż pełną niezapomnianych przygód, fascynujących zabytków i relaksu w malowniczych krajobrazach. Zarezerwuj swoje wymarzone wakacje już dziś i odkryj magiczny świat Maroka!</br></span>
                                 </div>
                             </div>
                         </div>

@@ -14,16 +14,13 @@
         <link href="../css/styles.css" rel="stylesheet" />
 
         <link href="../css/destinationPage.css" rel="stylesheet" />
-
-        <link href="../css/login.css" rel="stylesheet" />
-        <!-- CSS w celu responsywności baneru-->
         <script src="../js/scripts.js"></script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body onload="startAccount()">
+    <body onload="startDest()">
         <!-- Pasek nawigacyjny-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
@@ -36,14 +33,14 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Destynacje</a></li>
+                                <li><a class="dropdown-item" href="../allDestinations.html">Destynacje</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popularne</a></li>
-                                <li><a class="dropdown-item" href="#!">Last Minute</a></li>
+                                <li><a class="dropdown-item" href="../popular.html">Popularne</a></li>
+                                <li><a class="dropdown-item" href="../lastMinute.html">Last Minute</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <div>
+                    <div id="loginSpace">
                         <a href="../loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
                         <a href="../registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
                     </div>
@@ -54,49 +51,48 @@
         <div id="tlo">
             <main>
                 <div id="container">
-                    <iframe src="https://www.youtube.com/embed/mfxQy5A_tHs?si=sSnjARunxmrnAbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video"><iframe src="https://www.youtube.com/embed/__yvrxmpDh4?si=wrLriYviRGZfR6Qu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                     <div id="description">
-                        <h1>Wakacje w Egipcie z Biurem Podróży Dreamly</h1>
+                        <h1>Wakacje w Kenii z Biurem Podróży Dreamly</h1>
                         <div class="review">
                             <div class="bi-star-fill"></div>
                             <div class="bi-star-fill"></div>
                             <div class="bi-star-fill"></div>
                         </div>
-                        <h3>2580.00 PLN</h3>
+                        <span class="text-muted text-decoration-line-through">14120.00 PLN</span>
+                                        <h3>9672.50 PLN</h3>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center" style="display: flex; align-items: center; justify-content: center;">
-                                <h5 style="float: left;">---></h5>
-                                <button class="btn btn-primary\" onclick="">Zamów już teraz!</button>
-                                <h5 style="float: right;"><---</h5>
+                                <button class="btn btn-outline-dark" onclick="addDestinationToUser(4)">Zamów już teraz!</button>
                             </div>
                         </div>
                         <div class="twoCol">
                             <div class="left">
                                 <div>
                                     <h4>Wstęp</h4>
-                                    <span>Marzysz o niezapomnianych wakacjach pełnych słońca, historii i niezwykłych przygód? Biuro Podróży Dreamly zaprasza Cię na niezapomniane wakacje w Egipcie! Odkryj z nami magiczny kraj, który od wieków fascynuje podróżników swoją bogatą historią, imponującymi zabytkami i wyjątkową kulturą.</span>
+                                    <span>Zapraszamy Cię na niezapomnianą podróż do Kenii, kraju dzikiej przyrody, zapierających dech w piersiach krajobrazów i fascynującej kultury. Z Biurem Podróży Dreamly odkryjesz wszystkie uroki tego magicznego miejsca, od majestatycznych sawann i pełnych życia parków narodowych, przez malownicze jeziora, aż po białe plaże Oceanu Indyjskiego. Nasze starannie zaplanowane wycieczki zapewnią Ci komfort, bezpieczeństwo i niezapomniane wrażenia.</span>
                                 </div>
                                 <div>
-                                    <h4>Luksor - Królestwo Faraonów</h4>
-                                    <span>Rozpocznij swoją przygodę w Luksorze, miejscu, gdzie przeszłość spotyka się z teraźniejszością. Zwiedź monumentalne świątynie Karnaku i Luksoru, spacerując po alei sfinksów i podziwiając ogromne posągi faraonów. Nie przegap Doliny Królów, gdzie odkryjesz grobowce najsłynniejszych władców Egiptu, w tym słynny grobowiec Tutanchamona.</span>
+                                    <h4>Nairobi - Tętniąca Życiem Stolica</h4>
+                                    <span>Rozpocznij swoją kenijską przygodę w Nairobi, tętniącej życiem stolicy kraju. Zwiedzaj słynne Muzeum Narodowe Kenii, gdzie poznasz bogatą historię i kulturę regionu. Odwiedź Centrum Żyraf, gdzie będziesz miał okazję spotkać się z tymi majestatycznymi zwierzętami z bliska. Zrelaksuj się w Ogrodzie Botanicznym Karura Forest i zanurz się w lokalnej atmosferze na targu Maasai.</span>
                                 </div>
                                 <div>
-                                    <h4>Kair - Serce Egiptu</h4>
-                                    <span>Następnie udaj się do tętniącego życiem Kairu, największego miasta Afryki. Zwiedź Muzeum Egipskie, gdzie czeka na Ciebie bogata kolekcja artefaktów, w tym skarby z grobowca Tutanchamona. Spaceruj po malowniczym starym mieście, odwiedzając zabytkowe meczety, bazary i wąskie uliczki pełne kolorowych straganów. Kulminacją wizyty w Kairze będzie oczywiście wizyta przy Wielkich Piramidach w Gizie oraz majestatycznym Sfinksie.</span>
+                                    <h4>Park Narodowy Masai Mara - Serce Safari</h4>
+                                    <span>Odkryj prawdziwe serce safari w Parku Narodowym Masai Mara, jednym z najbardziej znanych rezerwatów przyrody na świecie. Podczas niezapomnianego safari będziesz miał szansę zobaczyć Wielką Piątkę (lwy, słonie, lamparty, nosorożce i bawoły) w ich naturalnym środowisku. Odwiedź wioskę Maasai i poznaj tradycje oraz kulturę tego dumnego plemienia.</span>
                                 </div>
                                 <div>
-                                    <h4>Rejs po Nilu</h4>
-                                    <span>Nie ma lepszego sposobu na odkrywanie piękna Egiptu niż rejs po Nilu. Wypłyń w luksusowy rejs, podziwiając zmieniający się krajobraz: zielone pola, tradycyjne wioski i majestatyczne świątynie wznoszące się nad brzegiem rzeki. Podczas rejsu odwiedzisz m.in. świątynie w Edfu i Kom Ombo, a także Asuan, gdzie zobaczysz wspaniałą tamę i świątynię Philae.</span>
+                                    <h4>Jezioro Nakuru - Raj dla Miłośników Ptaków</h4>
+                                    <span>Następnie udaj się do Parku Narodowego Jeziora Nakuru, znanego z niezwykłej różnorodności ptaków, w tym tysięcy flamingów, które nadają jezioru charakterystyczny różowy kolor. Oprócz ptaków, będziesz miał okazję zobaczyć nosorożce, zebry, żyrafy i wiele innych dzikich zwierząt. Podziwiaj malownicze widoki i zanurz się w ciszy i spokoju tego wyjątkowego miejsca.</span>
                                 </div>
                             </div>
                             <div class="right">
                                 <div>
-                                    <h4>Morze Czerwone - Raj dla Miłośników Wody</h4>
-                                    <span>Po intensywnym zwiedzaniu czas na relaks nad Morzem Czerwonym. Biuro Podróży Dreamly oferuje luksusowe pobyty w popularnych kurortach, takich jak Hurghada, Sharm El-Sheikh czy Marsa Alam. Ciesz się białymi plażami, krystalicznie czystą wodą i niesamowitym podwodnym światem, który przyciąga nurków z całego świata. Nasze oferty obejmują szeroki wybór sportów wodnych, takich jak snorkeling, nurkowanie, windsurfing i wiele innych.</span>
+                                    <h4>Góry Aberdare - Wysokogórska Przyroda</h4>
+                                    <span>Odwiedź Góry Aberdare, gdzie możesz podziwiać zapierające dech w piersiach krajobrazy, gęste lasy i imponujące wodospady. Wybierz się na pieszą wędrówkę po parkowych szlakach, odkrywając bogactwo flory i fauny tego regionu. Nocleg w unikalnych hotelach, takich jak Ark Lodge, gdzie możesz obserwować dzikie zwierzęta z komfortu swojego pokoju.</span>
                                 </div>
                                 <div>
-                                    <h4>Egipska Kuchnia i Kultura</h4>
-                                    <span>Podczas podróży z Biurem Podróży Dreamly będziesz miał okazję spróbować prawdziwych smaków Egiptu. Skosztuj lokalnych specjałów, takich jak koshari, falafel, shawarma czy baklava. Weź udział w tradycyjnych egipskich pokazach tanecznych, gdzie poznasz fascynujące tańce brzucha i dźwięki muzyki arabskiej.</span>
+                                    <h4>Tsavo - Kraina Czerwonej Ziemi</h4>
+                                    <span>Odkryj surowe piękno Parku Narodowego Tsavo, jednego z największych rezerwatów przyrody w Kenii. Park jest znany z „czerwonych słoni” i niezwykłych formacji skalnych. Podczas safari będziesz miał okazję zobaczyć lwy, bawoły, gepardy i wiele innych zwierząt. Odwiedź malownicze Mzima Springs, gdzie możesz obserwować hipopotamy i krokodyle w krystalicznie czystej wodzie.</span>
                                 </div>
                                 <div>
                                     <h4>Komfort i Bezpieczeństwo</h4>
@@ -104,7 +100,7 @@
                                 </div>
                                 <div>
                                     <h4>Podsumowanie</h4>
-                                    <span>Nie czekaj dłużej i dołącz do nas na niezapomniane wakacje w Egipcie! Biuro Podróży Dreamly zapewni Ci wyjątkową podróż pełną niezapomnianych przygód, fascynujących zabytków i relaksu nad Morzem Czerwonym. Zarezerwuj swoje wymarzone wakacje już dziś i odkryj magiczny świat starożytnego Egiptu!</br></span>
+                                    <span>Dołącz do nas i odkryj dziką i piękną Kenię z Biurem Podróży Dreamly. Gwarantujemy wyjątkowe wrażenia, niezapomniane chwile i profesjonalną opiekę na każdym etapie podróży. Zarezerwuj swoje wymarzone wakacje już dziś i poznaj bogactwo przyrody, kultury oraz malownicze krajobrazy Kenii!</br></span>
                                 </div>
                             </div>
                         </div>
@@ -112,13 +108,13 @@
                             <div id="carouselExample" class="carousel slide">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <img src="../assets/egipt1.webp" class="d-block w-100" alt="...">
+                                    <img src="../assets/kenia1.jpg" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="../assets/egipt2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../assets/kenia2.webp" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="../assets/egipt3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../assets/kenia3.jpg" class="d-block w-100" alt="...">
                                   </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

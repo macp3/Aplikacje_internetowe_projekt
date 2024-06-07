@@ -1,5 +1,5 @@
 //Lista dostępnych destynacji ze skróconymi opisami
-const destinations = [
+const destinationsDemo = [
     {"name": "Egipt", 
         "Description": "Odkryj magiczny Egipt z Biurem Podróży Dreamly! Zwiedź monumentalne piramidy w Gizie, \
         zachwyć się skarbami Muzeum Egipskiego w Kairze i podążaj śladami faraonów w Dolinie Królów w Luksorze. Odpocznij \
@@ -97,7 +97,7 @@ function registerValidate() {
     //wykorzystując funkcje pomocnicze
     //--------------------------------
 
-    var ok=true; //zmienna informująca o poprawnym wypełnieniu formularza
+    let ok=true; //zmienna informująca o poprawnym wypełnieniu formularza
 
     //Definicje odpowiednich wyrażeń regularnych dla sprawdzenia
     //poprawności danych wprowadzonych do pól tekstowych
@@ -176,9 +176,9 @@ function register() {
     //oczywiście ten sposób przetrzymywania danych logowania jest zły pod wieloma względami
     //ale na potrzeby tego projektu jest on wystarczający
 
-    users = JSON.parse(localStorage.getItem("users"));
+    let users = JSON.parse(localStorage.getItem("users"));
 
-    freeEmail = true;
+    let freeEmail = true;
 
     users.forEach(registeredUser => {
         if(registeredUser.email === user.email) {
@@ -228,13 +228,13 @@ function login() {
 
 function start() {
     //Funkcja dla innych dokumentów niż index sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
-    users = localStorage.getItem("users");
+    let users = localStorage.getItem("users");
 
     if (users === null) {
         localStorage.setItem("users", "[]");
     }
 
-    logged = JSON.parse(localStorage.getItem("loggedUser"));
+    let logged = JSON.parse(localStorage.getItem("loggedUser"));
 
     if (logged !== null) {
         let loginSpace = document.getElementById("loginSpace");
@@ -248,18 +248,18 @@ function startAccount() {
     //Funkcja startowa dla dokumentu myAccount, sprawdza czy użytkownik jest zalogowany i pokazuje mu jego zamówione wycieczki
     start();
 
-    logged = JSON.parse(localStorage.getItem("loggedUser"));
+    let logged = JSON.parse(localStorage.getItem("loggedUser"));
 
     if (logged === null) {
         window.location.href = "loginForm.html";
     }
     else {
-        data = ""
+        let data = ""
         if (logged.destinations.length > 0) {
             logged.destinations.forEach(dest => {
-                data += "<div class=\"userDest\"><img src="+ "assets/" +destinations[dest].minature +" style=\"width: 180px; height: auto; border-radius: 25px;\" />" +
-                "<h4>"+ destinations[dest].name +"</h4>" +
-                "<span>" + destinations[dest].Description +"</span>" +
+                data += "<div class=\"userDest\"><img src="+ "assets/" +destinationsDemo[dest].minature +" style=\"width: 180px; height: auto; border-radius: 25px;\" />" +
+                "<h4>"+ destinationsDemo[dest].name +"</h4>" +
+                "<span>" + destinationsDemo[dest].Description +"</span>" +
                 "<h5>Status: Nasz agent niedługo skontaktuje się z tobą</h5>" +
                 "<div id=\"settings\"><button class=\"btn btn-outline-dark\" onclick=\"deleteDestinationFromUser("+dest+")\" >Zrezygnuj :(</button></div>" +
                 "</div>"
@@ -276,13 +276,13 @@ function startAccount() {
 
 function startDest() {
     //Funkcja dokumentow w folderze destinationPage sprawdzająca czy użytkownik logował się już w danej sesji, jeśli nie to ustawia odpowiednie parametry
-    users = localStorage.getItem("users");
+    let users = localStorage.getItem("users");
 
     if (users === null) {
         localStorage.setItem("users", "[]");
     }
 
-    logged = JSON.parse(localStorage.getItem("loggedUser"));
+    let logged = JSON.parse(localStorage.getItem("loggedUser"));
 
     if (logged !== null) {
         let loginSpace = document.getElementById("loginSpace");
@@ -293,46 +293,77 @@ function startDest() {
 }
 
 function logout() {
-    localStorage.setItem("loggedUser", null);
-    window.location.href = "index.html";
+    if (window.confirm("Czy na pewno chcesz się wylogować?")) {
+        localStorage.removeItem("loggedUser");
+        window.location.href = "index.html";   
+    }
 }
 
 function addDestinationToUser(destinationIndex) 
 {
-    logged = JSON.parse(localStorage.getItem("loggedUser"));
-    isAdded = false;
-    logged.destinations.forEach(dest => {
-        if(dest === destinationIndex) {
-            document.getElementById("container").innerHTML = "<h2>Ta wycieczka jest już przypisana do twojego konta!</h2>";
-            isAdded = true
-        }
-    });
+    let logged = JSON.parse(localStorage.getItem("loggedUser"));
 
-    if(!isAdded)
-    {
-        logged.destinations.push(destinationIndex);
-        localStorage.setItem("loggedUser", JSON.stringify(logged));
-        document.getElementById("container").innerHTML = "<h2>Dziękujemy! Wycieczka została przypisana do twojego konta!</h2>";
+    if (logged === null) {
+        window.location.href = "../loginForm.html";   
+    }
+    else{
+
+        let isAdded = false;
+        logged.destinations.forEach(dest => {
+            if(dest === destinationIndex) {
+                document.getElementById("container").innerHTML = "<h2>Ta wycieczka jest już przypisana do twojego konta!</h2>";
+                isAdded = true
+            }
+        });
+
+        if(!isAdded)
+        {
+            logged.destinations.push(destinationIndex);
+            localStorage.setItem("loggedUser", JSON.stringify(logged));
+
+            let users = JSON.parse(localStorage.getItem("users"));
+
+            users.forEach(user => {
+                if (user.email === logged.email) {
+                    user.destinations.push(destinationIndex)
+                }
+            });
+
+            localStorage.setItem("users", JSON.stringify(users));
+
+            document.getElementById("container").innerHTML = "<h2>Dziękujemy! Wycieczka została przypisana do twojego konta!</h2>";
+        }
     }
 }
 
 function deleteDestinationFromUser(destinationIndex) 
 {
-    //Funcja usuwająca wycieczkę z konta użytkownila
-    
-    logged = JSON.parse(localStorage.getItem("loggedUser"));
+    //Funcja usuwająca wycieczkę z konta zalogowanego użytkownika oraz z bazy
 
-    logged.destinations.splice(logged.destinations.indexOf(destinationIndex),1);
+    if (window.confirm("Czy na pewno chcesz zrezygnować z wycieczki?")) {
+        let logged = JSON.parse(localStorage.getItem("loggedUser"));
 
-    localStorage.setItem("loggedUser", JSON.stringify(logged));
+        logged.destinations.splice(logged.destinations.indexOf(destinationIndex),1);
 
-    window.location.href = "myAccount.html";
+        let users = JSON.parse(localStorage.getItem("users"));
+
+        users.forEach(user => {
+            if (user.email === logged.email) {
+                user.destinations.splice(user.destinations.indexOf(destinationIndex),1);
+            }
+        });
+
+        localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("loggedUser", JSON.stringify(logged));
+
+        window.location.href = "myAccount.html";
+    }
 }
 
 function startEdit() {
     start();
 
-    logged = JSON.parse(localStorage.getItem("loggedUser"));
+    let logged = JSON.parse(localStorage.getItem("loggedUser"));
 
     document.getElementById("name").value = logged.name;
     document.getElementById("secondName").value = logged.secondName
@@ -344,26 +375,53 @@ function startEdit() {
 }
 
 function editAccount() {
+    //Edycja pól użytkownika w bazie
 
     if (window.confirm("Czy na pewno chcesz edytować dane użytkownika?")) {
-        logged = JSON.parse(localStorage.getItem("loggedUser"));
 
-        logged.name = document.getElementById("name").value 
-        logged.secondName = document.getElementById("secondName").value 
-        logged.email = document.getElementById("email").value 
-        logged.address = document.getElementById("address").value 
-        logged.postalNumber = document.getElementById("postalNumber").value 
-        logged.phone = document.getElementById("phone").value 
-        logged.password = document.getElementById("password").value 
+        //użytkownik zalogowany
+        let logged = JSON.parse(localStorage.getItem("loggedUser"));
+        
+        //baza danych
+        let users = JSON.parse(localStorage.getItem("users"));
+
+        for (let index = 0; index < users.length; index++) {
+            if (users[index].email === logged.email) {
+                logged.name = document.getElementById("name").value 
+                logged.secondName = document.getElementById("secondName").value 
+                logged.email = document.getElementById("email").value 
+                logged.address = document.getElementById("address").value 
+                logged.postalNumber = document.getElementById("postalNumber").value 
+                logged.phone = document.getElementById("phone").value 
+                logged.password = document.getElementById("password").value 
+
+                users[index] = logged;
+            }
+        }
 
         localStorage.setItem("loggedUser", JSON.stringify(logged));
+        localStorage.setItem("users", JSON.stringify(users));
 
         window.alert("Dane zostały zmienione")
         window.location.href = "myAccount.html";
     } 
-
 }
 
 function back() {
     window.location.href = "myAccount.html";
+}
+
+function deleteAccount() {
+    if (window.confirm("Czy na pewno chcesz usunąć konto?")) {
+
+        let users = JSON.parse(localStorage.getItem("users"));
+
+        users.fliter(function (user) {
+            return user.email !== logged.email;
+        })
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        logout();
+    } 
 }

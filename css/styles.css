@@ -12,13 +12,21 @@
  */
 
  /*
-  ustawienie stylu przywitania użytkownika
+  -------------------------------------------------------------------------------------------------------------------
+ */
+
+ /*
+  ustawienie stylu przywitania zalogowanego użytkownika
  */
 
  .hello{
   color: white;
   margin: 15px;
 }
+
+ /*
+  style dla półprzeźroczystego kontenera
+ */
 
 #container{
   max-width: 1500px;
@@ -40,6 +48,10 @@ main{
   justify-content: center;
   align-items: center;
 }
+
+/*
+  style dla czcionki
+ */
 
 body {
   font-family: "Raleway", sans-serif !important;
@@ -87,6 +99,21 @@ body {
   }
 }
 
+/*
+  style dla przycisków zaloguj się oraz zarejestruj się
+  wyklucza przyciski w karuzeli zdjęć
+ */
+
+button:not(.carousel-control-prev,.carousel-control-next){
+  background: linear-gradient(
+      to left,
+      rgba(255,255,255,0.01),
+      rgba(255,255,255,0.25)
+  );
+}
+/*
+  -------------------------------------------------------------------------------------------------------------------
+ */
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

@@ -14,8 +14,6 @@
         <link href="../css/styles.css" rel="stylesheet" />
 
         <link href="../css/destinationPage.css" rel="stylesheet" />
-
-        <link href="../css/login.css" rel="stylesheet" />
         <!-- CSS w celu responsywności baneru-->
         <script src="../js/scripts.js"></script>
 
@@ -23,7 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
-    <body onload="startAccount()">
+    <body onload="startDest()">
         <!-- Pasek nawigacyjny-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-4 px-lg-5">
@@ -36,14 +34,14 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Wybierz wymarzone wakacje</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">Destynacje</a></li>
+                                <li><a class="dropdown-item" href="../allDestinations.html">Destynacje</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popularne</a></li>
-                                <li><a class="dropdown-item" href="#!">Last Minute</a></li>
+                                <li><a class="dropdown-item" href="../popular.html">Popularne</a></li>
+                                <li><a class="dropdown-item" href="../lastMinute.html">Last Minute</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <div>
+                    <div id="loginSpace">
                         <a href="../loginForm.html"><button class="btn btn-outline-light">Zaloguj się</button></a>
                         <a href="../registerForm.html"><button class="btn btn-outline-light">Zarejestruj się</button></a>
                     </div>
@@ -54,49 +52,49 @@
         <div id="tlo">
             <main>
                 <div id="container">
-                    <iframe src="https://www.youtube.com/embed/mfxQy5A_tHs?si=sSnjARunxmrnAbIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="video"><iframe src="https://www.youtube.com/embed/rHaykSq0SbU?si=QRwTBk41v77ttQ4P"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
                     <div id="description">
-                        <h1>Wakacje w Egipcie z Biurem Podróży Dreamly</h1>
+                        <h1>Wakacje na Sri Lance z Biurem Podróży Dreamly</h1>
                         <div class="review">
                             <div class="bi-star-fill"></div>
                             <div class="bi-star-fill"></div>
                             <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
+                            <div class="bi-star-fill"></div>
                         </div>
-                        <h3>2580.00 PLN</h3>
+                        <h3>10622.55 PLN</h3>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center" style="display: flex; align-items: center; justify-content: center;">
-                                <h5 style="float: left;">---></h5>
-                                <button class="btn btn-primary\" onclick="">Zamów już teraz!</button>
-                                <h5 style="float: right;"><---</h5>
+                                <button class="btn btn-outline-dark" onclick="addDestinationToUser(3)">Zamów już teraz!</button>
                             </div>
                         </div>
                         <div class="twoCol">
                             <div class="left">
                                 <div>
                                     <h4>Wstęp</h4>
-                                    <span>Marzysz o niezapomnianych wakacjach pełnych słońca, historii i niezwykłych przygód? Biuro Podróży Dreamly zaprasza Cię na niezapomniane wakacje w Egipcie! Odkryj z nami magiczny kraj, który od wieków fascynuje podróżników swoją bogatą historią, imponującymi zabytkami i wyjątkową kulturą.</span>
+                                    <span>Zapraszamy Cię na niezapomnianą podróż na Sri Lankę, rajską wyspę o nieskończonej różnorodności. Z Biurem Podróży XYZ odkryjesz egzotyczne piękno tego kraju, od starożytnych miast i świątyń, przez bujne plantacje herbaty, aż po złociste plaże i dziką przyrodę. Nasze starannie zaplanowane wycieczki zapewnią Ci komfort, bezpieczeństwo i niezapomniane wrażenia.</span>
                                 </div>
                                 <div>
-                                    <h4>Luksor - Królestwo Faraonów</h4>
-                                    <span>Rozpocznij swoją przygodę w Luksorze, miejscu, gdzie przeszłość spotyka się z teraźniejszością. Zwiedź monumentalne świątynie Karnaku i Luksoru, spacerując po alei sfinksów i podziwiając ogromne posągi faraonów. Nie przegap Doliny Królów, gdzie odkryjesz grobowce najsłynniejszych władców Egiptu, w tym słynny grobowiec Tutanchamona.</span>
+                                    <h4>Kolombo - Tętniąca Życiem Stolica</h4>
+                                    <span>Rozpocznij swoją przygodę w Kolombo, tętniącej życiem stolicy Sri Lanki. Zwiedzaj nowoczesne dzielnice miasta, zabytkowe świątynie, kolorowe targi i wspaniałe kolonialne budynki. Delektuj się lokalną kuchnią, odwiedź słynne Muzeum Narodowe i zrelaksuj się w jednym z miejskich parków.</span>
                                 </div>
                                 <div>
-                                    <h4>Kair - Serce Egiptu</h4>
-                                    <span>Następnie udaj się do tętniącego życiem Kairu, największego miasta Afryki. Zwiedź Muzeum Egipskie, gdzie czeka na Ciebie bogata kolekcja artefaktów, w tym skarby z grobowca Tutanchamona. Spaceruj po malowniczym starym mieście, odwiedzając zabytkowe meczety, bazary i wąskie uliczki pełne kolorowych straganów. Kulminacją wizyty w Kairze będzie oczywiście wizyta przy Wielkich Piramidach w Gizie oraz majestatycznym Sfinksie.</span>
+                                    <h4>Anuradhapura - Starodawne Miasto</h4>
+                                    <span>Przenieś się w czasie, zwiedzając Anuradhapurę, jedno z najstarszych miast świata. Podziwiaj imponujące stupy, świątynie i starożytne ruiny, które świadczą o dawnej świetności tego miejsca. Odwiedź Święte Drzewo Bo, jedno z najstarszych drzew na świecie, które jest symbolem buddyzmu na wyspie.</span>
                                 </div>
                                 <div>
-                                    <h4>Rejs po Nilu</h4>
-                                    <span>Nie ma lepszego sposobu na odkrywanie piękna Egiptu niż rejs po Nilu. Wypłyń w luksusowy rejs, podziwiając zmieniający się krajobraz: zielone pola, tradycyjne wioski i majestatyczne świątynie wznoszące się nad brzegiem rzeki. Podczas rejsu odwiedzisz m.in. świątynie w Edfu i Kom Ombo, a także Asuan, gdzie zobaczysz wspaniałą tamę i świątynię Philae.</span>
+                                    <h4>Sigiriya - Lwia Skała</h4>
+                                    <span>Odwiedź jedno z najbardziej niezwykłych miejsc na Sri Lance - Sigiriyę, zwaną Lwią Skałą. Wspinaj się na szczyt tej imponującej formacji skalnej, skąd roztacza się zapierający dech w piersiach widok na okoliczne dżungle i ruiny starożytnego pałacu. Podziwiaj piękne freski i spaceruj po ogrodach królewskich.</span>
                                 </div>
                             </div>
                             <div class="right">
                                 <div>
-                                    <h4>Morze Czerwone - Raj dla Miłośników Wody</h4>
-                                    <span>Po intensywnym zwiedzaniu czas na relaks nad Morzem Czerwonym. Biuro Podróży Dreamly oferuje luksusowe pobyty w popularnych kurortach, takich jak Hurghada, Sharm El-Sheikh czy Marsa Alam. Ciesz się białymi plażami, krystalicznie czystą wodą i niesamowitym podwodnym światem, który przyciąga nurków z całego świata. Nasze oferty obejmują szeroki wybór sportów wodnych, takich jak snorkeling, nurkowanie, windsurfing i wiele innych.</span>
+                                    <h4>Polonnaruwa - Świat Dziedzictwa</h4>
+                                    <span>Zwiedź Polonnaruwę, drugie starożytne miasto na naszej trasie. Odkryj wspaniałe ruiny pałaców, świątyń i posągów Buddy, wpisane na listę UNESCO. Spacerując po rozległych terenach archeologicznych, poczujesz magię tego miejsca i zrozumiesz jego historyczne znaczenie.</span>
                                 </div>
                                 <div>
-                                    <h4>Egipska Kuchnia i Kultura</h4>
-                                    <span>Podczas podróży z Biurem Podróży Dreamly będziesz miał okazję spróbować prawdziwych smaków Egiptu. Skosztuj lokalnych specjałów, takich jak koshari, falafel, shawarma czy baklava. Weź udział w tradycyjnych egipskich pokazach tanecznych, gdzie poznasz fascynujące tańce brzucha i dźwięki muzyki arabskiej.</span>
+                                    <h4>Kandy - Serce Wyspy</h4>
+                                    <span>Następnie udaj się do Kandy, duchowego i kulturalnego serca Sri Lanki. Zwiedź Świątynię Zęba, jedno z najważniejszych miejsc buddyzmu, gdzie przechowywana jest relikwia zęba Buddy. Ciesz się spacerem po Królewskim Ogrodzie Botanicznym i weź udział w tradycyjnym pokazie tańca kandyjskiego.</span>
                                 </div>
                                 <div>
                                     <h4>Komfort i Bezpieczeństwo</h4>
@@ -104,7 +102,7 @@
                                 </div>
                                 <div>
                                     <h4>Podsumowanie</h4>
-                                    <span>Nie czekaj dłużej i dołącz do nas na niezapomniane wakacje w Egipcie! Biuro Podróży Dreamly zapewni Ci wyjątkową podróż pełną niezapomnianych przygód, fascynujących zabytków i relaksu nad Morzem Czerwonym. Zarezerwuj swoje wymarzone wakacje już dziś i odkryj magiczny świat starożytnego Egiptu!</br></span>
+                                    <span>Dołącz do nas i odkryj rajską Sri Lankę z Biurem Podróży XYZ. Gwarantujemy wyjątkowe wrażenia, niezapomniane chwile i profesjonalną opiekę na każdym etapie podróży. Zarezerwuj swoje wymarzone wakacje już dziś i poznaj bogactwo kultury, historii oraz malownicze krajobrazy Sri Lanki!</br></span>
                                 </div>
                             </div>
                         </div>
@@ -112,13 +110,13 @@
                             <div id="carouselExample" class="carousel slide">
                                 <div class="carousel-inner">
                                   <div class="carousel-item active">
-                                    <img src="../assets/egipt1.webp" class="d-block w-100" alt="...">
+                                    <img src="../assets/sri_lanka1.jpg" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="../assets/egipt2.jpg" class="d-block w-100" alt="...">
+                                    <img src="../assets/sri_lanka2.jpg" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="carousel-item">
-                                    <img src="../assets/egipt3.jpg" class="d-block w-100" alt="...">
+                                    <img src="../assets/sri_lanka3.jpg" class="d-block w-100" alt="...">
                                   </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
